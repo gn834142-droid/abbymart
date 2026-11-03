@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABBY MART</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+
+        <div class="logo">
+            ABBY MART
+        </div>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search products">
+            <button onclick="searchProduct()">Search</button>
+
+            <a href="cart.html" class="cart-icon">
+    🛒 <span id="cart-count">0</span>
+</a>
+
+<a href="wishlist.html" class="wishlist-icon">
+    ❤️ <span id="wishlist-count">0</span>
+</a>
+
+        </div>
+
+        
+
+    </header>
+
+    <section class="hero" id="home">
+
+       <div class="hero-content">
+
+    <h1 id="heroTitle">
+        Welcome To ABBY MART
+    </h1>
+
+    <p id="heroText">
+        Skincare • Shoes • Sandals • Fashion
+    </p>
+
+    <a href="#shop" class="hero-btn">
+        Shop Now
+    </a>
+
+</div>
+
+    </section>
+
+
+<section class="categories" id="shop">
+
+    <h2>Shop By Category</h2>
+
+    <div class="slider-wrapper">
+
+    <button class="slide-btn left" onclick="scrollLeftCategory()">
+        ❮
+    </button>
+
+    <div class="category-slider" id="categorySlider">
+
+        <a href="skincare.html" class="category-card">
+
+            <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600" alt="Skincare">
+
+            <div class="category-name">
+                Skincare
+            </div>
+
+        </a>
+
+        <a href="shoes.html" class="category-card">
+
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600" alt="Shoes">
+
+            <div class="category-name">
+                Shoes
+            </div>
+
+        </a>
+
+        <a href="women.html" class="category-card">
+
+            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600" alt="Women's Fashion">
+
+            <div class="category-name">
+                Women's Fashion
+            </div>
+
+        </a>
+
+        <a href="men.html" class="category-card">
+
+            <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=600" alt="Men's Fashion">
+
+            <div class="category-name">
+                Men's Fashion
+            </div>
+
+        </a>
+
+        <a href="sandals.html" class="category-card">
+
+            <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=600" alt="Sandals">
+
+            <div class="category-name">
+                Sandals
+            </div>
+
+        </a>
+
+    </div>
+    
+            <button class="slide-btn right" onclick="scrollRightCategory()">
+        ❯
+    </button>
+
+     </div>
+</div>
+
+</section>
+
+
+
+
+     <section class="products">
+
+    <h2>Trending Products</h2>
+
+    <div class="slider-wrapper">
+
+        <button class="slide-btn left"
+        onclick="scrollLeftProduct()">
+            ❮
+        </button>
+
+        <div class="product-slider" id="product-slider">
+
+        <div class="product-card">
+
+         <div class="wishlist"
+onclick="addToWishlist('Skincare Kit',120)">
+❤
+</div>  
+
+            <a href="product.html" class="product-link">
+            <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600" alt="">
+        </a>
+
+            <div class="product-info">
+
+                <h3>Skincare Kit</h3>
+
+                <div class="rating">
+                    ★★★★★
+                </div>
+
+                <p class="price">GH₵120</p>
+
+               <button onclick="addToCart(
+'Skincare Kit',
+120,1
+)">
+    Add To Cart
+</button>
+            </div>
+
+        </div>
+
+        <div class="product-card">
+
+          <div class="wishlist"
+onclick="addToWishlist('Fashion Sneakers',350)">
+❤
+</div>
+
+            <a href="product.html" class="product-link">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600" alt="">
+        </a>
+
+            <div class="product-info">
+
+                <h3>Fashion Sneakers</h3>
+
+                <div class="rating">
+                    ★★★★★
+                </div>
+
+                <p class="price">GH₵350</p>
+
+                <button onclick="addToCart(
+'Fashion Sneakers',
+350,1
+)">
+    Add To Cart
+</button>
+            </div>
+
+        </div>
+
+        <div class="product-card">
+
+        <div class="wishlist"
+onclick="addToWishlist('Men Shirt',150)">
+❤
+</div>
+
+            <a href="product.html" class="product-link">
+            <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=600" alt="">
+        </a>
+            <div class="product-info">
+
+                <h3>Men Shirt</h3>
+
+                <div class="rating">
+                    ★★★★★
+                </div>
+
+                <p class="price">GH₵150</p>
+
+               <button onclick="addToCart(
+'Men shirt',
+150,1
+)">
+    Add To Cart
+</button>
+
+            </div>
+
+        </div>
+
+        <div class="product-card">
+
+        <div class="wishlist"
+onclick="addToWishlist('Women Fashion',250)">
+❤
+</div>
+
+            <a href="product.html" class="product-link">
+            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600" alt="">
+        </a>
+            <div class="product-info">
+
+                <h3>Women Fashion</h3>
+
+                <div class="rating">
+                    ★★★★★
+                </div>
+
+                <p class="price">GH₵250</p>
+
+               <button onclick="addToCart(
+'Women Fashion',
+250,1
+)">
+    Add To Cart
+</button>
+
+            </div>
+        </div>
+
+        <button class="slide-btn right"
+onclick="scrollRightProduct()">
+    ❯
+</button>
+
+    </div>
+
+</section>
+
+<section class="flash-sale">
+
+    <div class="flash-header">
+        <h2>⚡ Flash Sale</h2>
+        <p>Limited Time Deals</p>
+    </div>
+
+    <div class="slider-wrapper">
+
+        <button class="slide-btn left"
+        onclick="scrollLeftFlashSale()">
+            ❮
+        </button>
+
+        <div class="flash-slider" id="flashSlider">
+
+            <div class="flash-card">
+
+                <div class="discount">-25%</div>
+
+                <a href="product.html">
+                    <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600" alt="Skincare">
+                </a>
+
+                <div class="flash-info">
+
+                    <h3>Skincare Kit</h3>
+
+                    <div class="prices">
+                        <span class="old-price">GH₵120</span>
+                        <span class="new-price">GH₵90</span>
+                    </div>
+
+                    <button onclick="addToCart('Skincare Kit',90,1)">
+                        Buy Now
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="flash-card">
+
+                <div class="discount">-20%</div>
+
+                <a href="product.html">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600" alt="Sneakers">
+                </a>
+
+                <div class="flash-info">
+
+                    <h3>Fashion Sneakers</h3>
+
+                    <div class="prices">
+                        <span class="old-price">GH₵350</span>
+                        <span class="new-price">GH₵280</span>
+                    </div>
+
+                    <button onclick="addToCart('Fashion Sneakers',280,1)">
+                        Buy Now
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="flash-card">
+
+                <div class="discount">-40%</div>
+
+                <a href="product.html">
+                    <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600" alt="Fashion">
+                </a>
+
+                <div class="flash-info">
+
+                    <h3>Women's Outfit</h3>
+
+                    <div class="prices">
+                        <span class="old-price">GH₵300</span>
+                        <span class="new-price">GH₵180</span>
+                    </div>
+
+                    <button onclick="addToCart('Women Outfit',180,1)">
+                        Buy Now
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <button class="slide-btn right"
+        onclick="scrollRightFlashSale()">
+            ❯
+        </button>
+
+    </div>
+
+</section>
+
+
+<section class="new-arrivals">
+
+    <div class="section-heading">
+        <h2>✨ New Arrivals</h2>
+        <p>Fresh styles just landed at ABBY MART</p>
+    </div>
+
+    <div class="slider-wrapper">
+
+        <button class="slide-btn left"
+        onclick="scrollLeftArrival()">
+            ❮
+        </button>
+
+        <div class="arrival-slider" id="arrivalSlider">
+
+            <div class="arrival-card">
+
+                <div class="new-tag">NEW</div>
+
+                <a href="product.html">
+                    <img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=600" alt="">
+                </a>
+
+                <div class="arrival-info">
+
+                    <h3>Elegant Women's Dress</h3>
+
+                    <div class="rating">★★★★★</div>
+
+                    <p class="arrival-price">GH₵220</p>
+
+                    <button>View Product</button>
+
+                </div>
+
+            </div>
+
+            <div class="arrival-card">
+
+                <div class="new-tag">NEW</div>
+
+                <a href="product.html">
+                    <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=600" alt="">
+                </a>
+
+                <div class="arrival-info">
+
+                    <h3>Trendy Sandals</h3>
+
+                    <div class="rating">★★★★★</div>
+
+                    <p class="arrival-price">GH₵180</p>
+
+                    <button>View Product</button>
+
+                </div>
+
+            </div>
+
+            <div class="arrival-card">
+
+                <div class="new-tag">NEW</div>
+
+                <a href="product.html">
+                    <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=600" alt="">
+                </a>
+
+                <div class="arrival-info">
+
+                    <h3>Premium T-Shirt</h3>
+
+                    <div class="rating">★★★★★</div>
+
+                    <p class="arrival-price">GH₵150</p>
+
+                    <button>View Product</button>
+
+                </div>
+
+            </div>
+
+            <div class="arrival-card">
+
+                <div class="new-tag">NEW</div>
+
+                <a href="product.html">
+                    <img src="https://images.unsplash.com/photo-1612817159949-195b6eb9e31a?w=600" alt="">
+                </a>
+
+                <div class="arrival-info">
+
+                    <h3>Beauty Essentials Kit</h3>
+
+                    <div class="rating">★★★★★</div>
+
+                    <p class="arrival-price">GH₵130</p>
+
+                    <button>View Product</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <button class="slide-btn right"
+        onclick="scrollRightArrival()">
+            ❯
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<section class="why-us">
+
+    <div class="why-header">
+        <h2>Why Shop With ABBY MART?</h2>
+        <p>We're committed to giving you the best shopping experience.</p>
+    </div>
+
+    <div class="why-grid">
+
+        <div class="why-card">
+            <div class="why-icon">🚚</div>
+            <h3>Fast Delivery</h3>
+            <p>
+                Get your orders delivered quickly and safely to your doorstep.
+            </p>
+        </div>
+
+        <div class="why-card">
+            <div class="why-icon">🔒</div>
+            <h3>Secure Payments</h3>
+            <p>
+                Shop confidently with protected and secure payment methods.
+            </p>
+        </div>
+
+        <div class="why-card">
+            <div class="why-icon">💎</div>
+            <h3>Quality Products</h3>
+            <p>
+                Carefully selected products that meet our quality standards.
+            </p>
+        </div>
+
+        <div class="why-card">
+            <div class="why-icon">📞</div>
+            <h3>Customer Support</h3>
+            <p>
+                Friendly support whenever you need assistance.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="reviews">
+
+    <div class="reviews-header">
+
+        <h2>What Our Customers Say</h2>
+
+        <p>Trusted by happy shoppers across the country.</p>
+
+    </div>
+
+    <div class="reviews-container">
+
+        <div class="review-card">
+
+            <div class="stars">★★★★★</div>
+
+            <p>
+                I ordered a skincare kit and it arrived quickly.
+                The products were exactly as described and the
+                quality was amazing.
+            </p>
+
+            <div class="customer">
+                Sarah K.
+            </div>
+
+        </div>
+
+        <div class="review-card">
+
+            <div class="stars">★★★★★</div>
+
+            <p>
+                The sneakers were comfortable and stylish.
+                Delivery was fast and the packaging was neat.
+            </p>
+
+            <div class="customer">
+                Michael A.
+            </div>
+
+        </div>
+
+        <div class="review-card">
+
+            <div class="stars">★★★★★</div>
+
+            <p>
+                I love the women's fashion collection.
+                Great prices and excellent customer support.
+            </p>
+
+            <div class="customer">
+                Linda O.
+       </div> 
+    </section>
+
+
+    <section class="newsletter">
+
+    <div class="newsletter-content">
+
+        <h2>Stay Updated</h2>
+
+        <p>
+            Subscribe to receive updates on new arrivals,
+            flash sales, exclusive discounts and special offers.
+        </p>
+
+        <div class="newsletter-form">
+
+            <input
+                type="email"
+                id="newsletterEmail"
+                placeholder="Enter your email address">
+
+            <button onclick="subscribeNewsletter()">
+                Subscribe
+            </button>
+
+        </div>
+
+        <p id="newsletterMessage"></p>
+
+    </div>
+
+</section>
+
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- Brand -->
+
+        <div class="footer-section">
+
+            <h2>ABBY MART</h2>
+
+            <p>
+                Your trusted destination for skincare,
+                shoes, sandals, men's fashion and women's fashion.
+            </p>
+
+        </div>
+
+        <!-- Quick Links -->
+
+        <div class="footer-section">
+
+            <h3>Quick Links</h3>
+
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#shop">Categories</a></li>
+                <li><a href="#shop">Flash Sale</a></li>
+            </ul>
+
+        </div>
+
+        <!-- Categories -->
+
+        <div class="footer-section">
+
+            <h3>Categories</h3>
+
+            <ul>
+                <li><a href="#shop">Skincare</a></li>
+                <li><a href="#shop">Shoes</a></li>
+                <li><a href="#shop">Women's Fashion</a></li>
+                <li><a href="#shop">Men's Fashion</a></li>
+                <li><a href="#shop">Sandals</a></li>
+            </ul>
+
+        </div>
+
+        <!-- Contact -->
+
+        <div class="footer-section" id="contact">
+
+            <h3>Contact Us</h3>
+
+            <p>📍 Ghana</p>
+            <p>📞 +233 XX XXX XXXX</p>
+            <p>📧 support@abbymart.com</p>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 ABBY MART. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+    
+    <script src="script.js"></script>
+
+</body>
+</html>
